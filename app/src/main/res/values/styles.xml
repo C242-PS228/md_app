@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base App Theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_100</item>
+        <item name="colorPrimaryVariant">@color/primary_80</item>
+        <item name="colorOnPrimary">@color/neutral_00</item>
+        <item name="colorSecondary">@color/neutral_70</item>
+        <item name="android:statusBarColor">@color/primary_100</item>
+    </style>
+
+    <style name="wrapper">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rounded_white20</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- EditText Style -->
+    <style name="EditTextPrimary">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textColor">@color/neutral_100</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <!-- Button Style -->
+    <style name="ButtonPrimary">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textColor">@color/neutral_00</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <!--text style-->
+    <style name="heading3">
+        <item name="android:textColor">@color/neutral_100</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+    </style>
+
+    <style name="paragraphRegular">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_100</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="paragraphRegular.bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_100</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+    </style>
+
+</resources>

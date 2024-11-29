@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Perceivo</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_analytics">Analytics</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
+
+    <string name="back_button">Back</string>
+    <string name="analytics_title">Analytics</string>
+    <string name="analytics_description">Penjelasan mengenai fitur analytics secara singkat</string>
+    <string name="link_hint">Enter link here</string>
+    <string name="analyze_button">Analyze</string>
+</resources>
