@@ -2,7 +2,7 @@
 This version **(for now)** only contains layout and global style, needs to be updated <3
 
 ## Sign In, Sign Up, Profile
-For Sign In, Sign Up, and Example for showing user Profile, please take a look on **Auth Branch**
+For Sign In, Sign Up, and Example for showing user Profile, please take a look on **[Auth Branch](https://github.com/C242-PS228/md_app/tree/auth)**
 
 ## Try the Features
 You can also download the apps for trying on your own android devices (for the whole app, or seperate features).
