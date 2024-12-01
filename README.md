@@ -8,6 +8,7 @@ For Sign In, Sign Up, and Example for showing user Profile, please take a look o
 You can also download the apps for trying on your own android devices (for the whole app, or seperate features).
 Check the folder: [file](https://github.com/C242-PS228/md_app/tree/main/file)
 
+#### Styling
 For example of Styling Implementation, please take a look on `res/layout/activity_analytics.xml`
 
 List style:
