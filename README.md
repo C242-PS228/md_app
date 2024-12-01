@@ -1,5 +1,12 @@
 # Perceivo
-This version only contains layout and global style, needs to be updated <3
+This version **(for now)** only contains layout and global style, needs to be updated <3
+
+## Sign In, Sign Up, Profile
+For Sign In, Sign Up, and Example for showing user Profile, please take a look on **Auth Branch**
+
+## Try the Features
+You can also download the apps for trying on your own android devices (for the whole app, or seperate features).
+Check the folder: file
 
 For example of Styling Implementation, please take a look on `res/layout/activity_analytics.xml`
 
