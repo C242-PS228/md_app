@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Perceivo</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_analytics">Analytics</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
+
+    <string name="back_button">Back</string>
+    <string name="analytics_title">Analytics</string>
+    <string name="analytics_description">Penjelasan mengenai fitur analytics secara singkat</string>
+    <string name="link_hint">Enter link here</string>
+    <string name="analyze_button">Analyze</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sub_header">Start discovering customer insights.\nLog in to Perceivo.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="or">Or</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="forgot_pw">Forgot Password?</string>
+    <string name="not_have_account">Don\'t have account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sub_header_signup">Turn social sentiment into success.\nCreate your Perceivo account today.</string>
+    <string name="username">Username</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="fullname">Full Name</string>
+    <string name="address">Address</string>
+    <string name="splash_screen">Splash Screen</string>
+    <string name="home">Home</string>
+    <string name="analytics">Analytics</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+</resources>

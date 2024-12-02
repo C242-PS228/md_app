@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Perceivo" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="colorPrimary">@color/primary_100</item>
+    </style>
+
+    <style name="Theme.Perceivo" parent="Base.Theme.Perceivo" />
+</resources>
