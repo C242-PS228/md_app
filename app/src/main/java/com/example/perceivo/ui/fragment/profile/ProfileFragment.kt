@@ -20,6 +20,7 @@ class ProfileFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         // TODO: Use the ViewModel
+        //Halo aku lagi belajar git sama kak elen
     }
 
     override fun onCreateView(
