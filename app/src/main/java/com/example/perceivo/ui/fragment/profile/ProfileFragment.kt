@@ -21,6 +21,7 @@ class ProfileFragment : Fragment() {
 
         // TODO: Use the ViewModel
         //Halo aku lagi belajar git sama kak elen
+        //percobaan kedua
     }
 
     override fun onCreateView(
