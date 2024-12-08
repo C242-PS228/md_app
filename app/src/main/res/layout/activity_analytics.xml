@@ -2,17 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    xmlns:tools="http://schemas.android/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_20">
+    android:background="@color/primary_20"
+    tools:context=".AnalyticsActivity">
 
-    <!--mencoba git-->
     <!-- Toolbar -->
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
         android:layout_height="64dp"
         android:background="@color/neutral_00"
         android:gravity="center_vertical"
@@ -20,82 +19,169 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <!-- Tombol Kembali -->
         <ImageButton
+            android:id="@+id/btn_back"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:background="@color/neutral_00"
+            android:background="@null"
             android:contentDescription="@string/back_button"
             android:src="@drawable/ic_back" />
 
+        <!-- Judul Toolbar -->
         <TextView
+            android:id="@+id/tv_toolbar_title"
             style="@style/heading3"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
             android:gravity="center"
-            android:text="@string/analytics_title" />
+            android:text="@string/title_detail_analytics"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_weight="1" />
     </LinearLayout>
 
-    <LinearLayout
+    <!-- Konten -->
+    <ScrollView
+        android:id="@+id/scroll_view"
         style="@style/wrapper"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="16dp"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp">
 
-        <TextView
-            style="@style/paragraphRegular"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/analytics_title"
-            android:layout_marginBottom="16dp"/>
+            android:orientation="vertical">
 
-        <TextView
-            style="@style/paragraphRegular.bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/analytics_title"
-            android:layout_marginBottom="8dp"/>
+            <!-- Penjelasan -->
+            <TextView
+                android:id="@+id/tv_description"
+                style="@style/paragraphRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/analytics_description"/>
 
-        <EditText
-            style="@style/EditTextPrimary"
-            android:background="@drawable/rounded_field"
-            android:hint="@string/link_hint"
-            android:inputType="text" />
+            <!-- Dropdown Platform -->
+            <Spinner
+                android:id="@+id/spinner_platform"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_field"
+                android:entries="@array/platforms"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginBottom="8dp"
+                android:spinnerMode="dropdown"
+                android:popupBackground="@drawable/rounded_field"
+                android:textColor="@color/neutral_100" />
 
-        <TextView
-            style="@style/paragraphRegular.bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/analytics_title"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"/>
+            <TextView
+                style="@style/paragraphRegular.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/link"
+                android:layout_marginBottom="8dp"/>
 
-        <EditText
-            style="@style/EditTextPrimary"
-            android:background="@drawable/rounded_field"
-            android:hint="@string/link_hint"
-            android:inputType="text" />
+            <!-- Container untuk Links -->
+            <LinearLayout
+                android:id="@+id/links_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical" />
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/ButtonPrimary"
-            android:text="@string/analyze_button"/>
+            <!-- Tombol Tambah Link -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_link"
+                style="@style/ButtonSecondary"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_plus"
+                android:text="@string/add_another_link" />
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/ButtonGoogle"
-            android:text="@string/analyze_button"
-            app:icon="@drawable/ic_google"/>
-    </LinearLayout>
+            <!-- Input Tags -->
+            <LinearLayout
+                android:id="@+id/tags_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/tv_tags_label"
+                    style="@style/paragraphRegular.bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/tags_label"/>
+
+                <EditText
+                    android:id="@+id/et_tags"
+                    style="@style/EditTextPrimary"
+                    android:background="@drawable/rounded_field"
+                    android:hint="@string/tags_hint"
+                    android:inputType="text" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_tag"
+                    style="@style/ButtonSecondary"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_plus"
+                    android:text="@string/add_tag" />
+
+                <!-- Tempat Daftar Tags -->
+                <LinearLayout
+                    android:id="@+id/tags_list_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Input Jumlah Komentar -->
+            <TextView
+                android:id="@+id/tv_comment_label"
+                style="@style/paragraphRegular.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/label_comment"/>
+
+            <EditText
+                android:id="@+id/et_comments"
+                style="@style/EditTextPrimary"
+                android:background="@drawable/rounded_field"
+                android:hint="@string/hint_number_of_comments"
+                android:inputType="number" />
+
+            <!-- Tombol Analyze -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_analyze"
+                android:layout_height="60dp"
+                style="@style/ButtonPrimary"
+                android:text="@string/analyze_button"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
     <include
         android:id="@+id/bottom_navigation"
         layout="@layout/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

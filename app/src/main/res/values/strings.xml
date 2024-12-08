@@ -8,6 +8,39 @@
     <string name="back_button">Back</string>
     <string name="analytics_title">Analytics</string>
     <string name="analytics_description">Penjelasan mengenai fitur analytics secara singkat</string>
+    <string name="title_detail_analytics">Detail Analytics</string>
+
+    <string name="select">Select Platform</string>
+
     <string name="link_hint">Enter link here</string>
+    <string name="link">Link</string>
+    <string name="add_another_link">Add another link</string>
+
+    <string name="tags_label">Tags</string>
+    <string name="tags_hint">Enter a tag</string>
+    <string name="add_tag">Add Tag</string>
+
+    <string name="label_comment">Number of Comments</string>
+    <string name="hint_number_of_comments">Number of Comments (ex: 1)</string>
     <string name="analyze_button">Analyze</string>
+    <string name="analytic_resume">Analytic Result</string>
+    <string name="platform">platform</string>
+    <string name="statistic">Statistic</string>
+    <string name="bar">bar</string>
+    <string name="positive_keywords">Positive Keywords</string>
+    <string name="negative_keywords">Negative Keywords</string>
+    <string name="positive">positive</string>
+    <string name="question">Question</string>
+    <string name="top_positive_comments">Top Positive Comments</string>
+    <string name="top_negative_comments">Top Negative Comments</string>
+    <string name="username">username</string>
+    <string name="comment">comment</string>
+    <string name="image_profile">image profile</string>
+
+    <string-array name="platforms">
+        <item>Instagram Post Analytics</item>
+        <item>YouTube Post Analytics</item>
+        <item>TikTok Post Analytics</item>
+        <item>Google Maps Analytics</item>
+    </string-array>
 </resources>

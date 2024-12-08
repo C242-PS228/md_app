@@ -2,7 +2,20 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Perceivo" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:fontFamily">@font/inter</item>
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/primary_100</item>
+        <item name="colorPrimaryVariant">@color/primary_80</item>
+        <item name="colorSecondary">@color/primary_60</item>
+
+        <!-- Neutral colors -->
+        <item name="colorSurface">@color/neutral_90</item>
+        <item name="colorOnSurface">@color/neutral_20</item>
+        <item name="background">@color/neutral_90</item>
+        <item name="colorOnBackground">@color/neutral_20</item>
+        <item name="colorError">@color/status_danger</item>
     </style>
+
+    <!-- Default theme (Light and Dark) -->
+    <style name="Theme.Perceivo" parent="Base.Theme.Perceivo" />
 </resources>
