@@ -12,6 +12,7 @@ import com.example.perceivo.data.DataStoreManager
 import com.example.perceivo.databinding.ActivitySignInBinding
 import com.example.perceivo.model.LoginRequest
 import com.example.perceivo.repository.AuthRepository
+import com.example.perceivo.repository.ProfileRepository
 import com.example.perceivo.viewmodel.AuthViewModel
 import com.example.perceivo.viewmodel.ViewModelFactory
 
@@ -20,6 +21,8 @@ class SignInActivity : AppCompatActivity() {
     private val viewModel: AuthViewModel by viewModels {
         ViewModelFactory(
             AuthRepository(ApiConfig.getApiService(),
+                dataStoreManager = DataStoreManager.getInstance(this)),
+            ProfileRepository(ApiConfig.getApiService(),
                 dataStoreManager = DataStoreManager.getInstance(this))
         )
     }

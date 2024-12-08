@@ -3,9 +3,12 @@ package com.example.perceivo.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.perceivo.repository.AuthRepository
+import com.example.perceivo.repository.ProfileRepository
+import com.example.perceivo.ui.fragment.profile.ProfileViewModel
 
 class ViewModelFactory (
-    private val authRepository: AuthRepository
+    private val authRepository: AuthRepository,
+    private val profileRepository: ProfileRepository
 
 ): ViewModelProvider.Factory {
     @Suppress("UNCHECKED_CAST")
@@ -16,7 +19,11 @@ class ViewModelFactory (
             }
                 modelClass.isAssignableFrom(SplashScreenViewModel::class.java) ->{
                     SplashScreenViewModel(authRepository) as T
-                }else ->
+                }
+            modelClass.isAssignableFrom(ProfileViewModel::class.java)-> {
+                ProfileViewModel(profileRepository, authRepository) as T
+            }
+            else ->
                 throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
         }
     }

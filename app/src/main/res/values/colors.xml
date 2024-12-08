@@ -21,6 +21,7 @@
     <color name="status_info">#2BABD8</color>
     <color name="status_warning">#D8B404</color>
     <color name="status_danger">#DB461C</color>
+    <color name="red_logout">#E22727</color>
 
     <color name="splash_screen">#1E4189</color>
 </resources>

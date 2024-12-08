@@ -29,4 +29,12 @@
     <string name="analytics">Analytics</string>
     <string name="history">History</string>
     <string name="profile">Profile</string>
+    <string name="setting">Setting</string>
+    <string name="account">Account</string>
+    <string name="updateprofile">Update Profile</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="changepassword">Change Password</string>
+    <string name="logout_icon">Icon Logout</string>
+    <string name="logout">Logout?</string>
 </resources>
