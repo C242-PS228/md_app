@@ -37,4 +37,12 @@
     <string name="changepassword">Change Password</string>
     <string name="logout_icon">Icon Logout</string>
     <string name="logout">Logout?</string>
+    <string name="welcome_user">Hello User,\nWelcome to Perceivo</string>
+    <string name="positif">Positif:</string>
+    <string name="negatif">Negatif:</string>
+    <string name="netral">Netral:</string>
+    <string name="positif_value">Jumlah Sentimen Positif</string>
+    <string name="netral_value">Jumlah Sentiment Netral</string>
+    <string name="negatif_value">Jumlah Sentiment Negatif</string>
+    <string name="sentiment_count">Sentiments Count: 0</string>
 </resources>

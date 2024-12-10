@@ -17,6 +17,7 @@ import com.example.perceivo.model.ChangePasswordRequest
 import com.example.perceivo.model.ProfileRequest
 import com.example.perceivo.repository.AuthRepository
 import com.example.perceivo.repository.ProfileRepository
+import com.example.perceivo.repository.SentimentStatisticRepository
 import com.example.perceivo.ui.SignInActivity
 import com.example.perceivo.viewmodel.UiState
 import com.example.perceivo.viewmodel.ViewModelFactory
@@ -38,7 +39,8 @@ class ProfileFragment : Fragment() {
         val dataStoreManager = DataStoreManager.getInstance(requireContext())
         val authRepository = AuthRepository(apiService, dataStoreManager)
         val profileRepository = ProfileRepository(apiService, dataStoreManager)
-        val factory = ViewModelFactory(authRepository, profileRepository)
+        val sentimentStatisticRepository = SentimentStatisticRepository(apiService, dataStoreManager)
+        val factory = ViewModelFactory(authRepository, profileRepository, sentimentStatisticRepository)
         viewModel = ViewModelProvider(this, factory).get(ProfileViewModel::class.java)
 
         return binding.root

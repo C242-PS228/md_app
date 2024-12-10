@@ -10,6 +10,7 @@ import com.example.perceivo.data.DataStoreManager
 import com.example.perceivo.databinding.ActivitySplashScreenBinding
 import com.example.perceivo.repository.AuthRepository
 import com.example.perceivo.repository.ProfileRepository
+import com.example.perceivo.repository.SentimentStatisticRepository
 import com.example.perceivo.viewmodel.SplashScreenViewModel
 import com.example.perceivo.viewmodel.ViewModelFactory
 
@@ -17,7 +18,8 @@ class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
     private val viewModel: SplashScreenViewModel by viewModels {
         ViewModelFactory(AuthRepository(ApiConfig.getApiService(), dataStoreManager = DataStoreManager.getInstance(this)),
-            ProfileRepository(ApiConfig.getApiService(), dataStoreManager = DataStoreManager.getInstance(this))
+            ProfileRepository(ApiConfig.getApiService(), dataStoreManager = DataStoreManager.getInstance(this)),
+            SentimentStatisticRepository(ApiConfig.getApiService(), dataStoreManager = DataStoreManager.getInstance(this))
         )
     }
     override fun onCreate(savedInstanceState: Bundle?) {
