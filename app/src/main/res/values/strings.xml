@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Perceivo</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_analytics">Analytics</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
+
+    <!--Dhilah-->
+    <string name="sign_in">Sign In</string>
+    <string name="sub_header">Start discovering customer insights.\nLog in to Perceivo.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="or">Or</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="forgot_pw">Forgot Password?</string>
+    <string name="not_have_account">Don\'t have account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sub_header_signup">Turn social sentiment into success.\nCreate your Perceivo account today.</string>
+    <string name="username">Username</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="fullname">Full Name</string>
+    <string name="address">Address</string>
+    <string name="splash_screen">Splash Screen</string>
+    <string name="home">Home</string>
+    <string name="analytics">Analytics</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="setting">Setting</string>
+    <string name="account">Account</string>
+    <string name="updateprofile">Update Profile</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="changepassword">Change Password</string>
+    <string name="logout_icon">Icon Logout</string>
+    <string name="logout">Logout?</string>
+
+    <!--Elen-->
+    <string name="back_button">Back</string>
+    <string name="analytics_title">Analytics</string>
+    <string name="analytics_description">Analyze audience opinions from TikTok, Instagram, Google Maps, or YouTube links. Get insights with sentiment stats, top comments, keywords, and a summary to boost your strategy.</string>
+    <string name="title_detail_analytics">Detail Analytics</string>
+
+    <string name="select">Select Platform</string>
+
+    <string name="link_hint">Enter link here</string>
+    <string name="link">Link</string>
+    <string name="add_another_link">Add another link</string>
+
+    <string name="tags_label">Tags</string>
+    <string name="tags_hint">Enter a tag</string>
+    <string name="add_tag">Add Tag</string>
+
+    <string name="label_comment">Number of Comments</string>
+    <string name="hint_number_of_comments">Number of Comments (ex: 1)</string>
+    <string name="analyze_button">Analyze</string>
+    <string name="analytic_resume">Resume</string>
+    <string name="platform">platform</string>
+    <string name="statistic">Statistic</string>
+    <string name="bar">bar</string>
+    <string name="positive_keywords">Positive Keywords</string>
+    <string name="negative_keywords">Negative Keywords</string>
+    <string name="positive">positive</string>
+    <string name="negative">negative</string>
+    <string name="neutral">neutral</string>
+    <string name="no_data">No Data</string>
+    <string name="anonymous">Anonymous</string>"
+    <string name="no_comment">No Comment</string>
+    <string name="error_fetching_data">Error fetching data. Please try again later.</string>
+    <string name="question">Question</string>
+    <string name="top_positive_comments">Top Positive Comments</string>
+    <string name="top_negative_comments">Top Negative Comments</string>
+    <string name="comment">comment</string>
+    <string name="image_profile">image profile</string>
+    <string name="title_for_this_analysis">Title for this analytics</string>
+    <string name="id_sentiment">id Sentiment</string>
+    <string name="title">Title</string>
+    <string name="assistance">Assistance</string>
+    <string name="choose_platform">Choose Platform</string>
+    <string name="input_your_title_here">Input your title here</string>
+    <string name="no_data_available">No data available</string>
+    <string name="not_found">Not Found</string>
+
+    <string-array name="platforms">
+        <item>Instagram</item>
+        <item>Youtube</item>
+        <item>Tiktok</item>
+        <item>Google Maps</item>
+    </string-array>
+</resources>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.analytics.AnalyticsFragment">
+
+    <!-- Konten -->
+    <ScrollView
+        android:id="@+id/scroll_view_analytics"
+        style="@style/wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Penjelasan -->
+            <TextView
+                android:id="@+id/tv_description"
+                style="@style/paragraphRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/analytics_description"/>
+
+            <!-- Input Title -->
+            <TextView
+                style="@style/paragraphRegular.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/title_for_this_analysis"/>
+
+            <EditText
+                android:id="@+id/et_title"
+                style="@style/EditTextPrimary"
+                android:background="@drawable/rounded_field"
+                android:hint="@string/input_your_title_here"
+                android:inputType="text" />
+
+            <!-- Dropdown Platform -->
+            <TextView
+                style="@style/paragraphRegular.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/choose_platform"/>
+
+            <Spinner
+                android:id="@+id/spinner_platform"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_field"
+                android:entries="@array/platforms"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginBottom="8dp"
+                android:spinnerMode="dropdown"
+                android:popupBackground="@drawable/rounded_field"
+                android:textColor="@color/neutral_100" />
+
+            <TextView
+                style="@style/paragraphRegular.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/link"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Container untuk Links -->
+            <LinearLayout
+                android:id="@+id/links_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical" />
+
+            <!-- Tombol Tambah Link -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_link"
+                style="@style/ButtonSecondary"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_plus"
+                android:text="@string/add_another_link" />
+
+            <!-- Input Tags -->
+            <LinearLayout
+                android:id="@+id/tags_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_tags_label"
+                    style="@style/paragraphRegular.bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/tags_label"/>
+
+                <EditText
+                    android:id="@+id/et_tags"
+                    style="@style/EditTextPrimary"
+                    android:background="@drawable/rounded_field"
+                    android:hint="@string/tags_hint"
+                    android:inputType="text" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_tag"
+                    style="@style/ButtonSecondary"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_plus"
+                    android:text="@string/add_tag" />
+
+                <!-- Tempat Daftar Tags -->
+                <LinearLayout
+                    android:id="@+id/tags_list_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Input Jumlah Komentar -->
+            <TextView
+                android:id="@+id/tv_comment_label"
+                style="@style/paragraphRegular.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/label_comment"/>
+
+            <EditText
+                android:id="@+id/et_comments"
+                style="@style/EditTextPrimary"
+                android:background="@drawable/rounded_field"
+                android:hint="@string/hint_number_of_comments"
+                android:inputType="number" />
+
+            <!-- Tombol Analyze -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_analyze"
+                android:layout_height="60dp"
+                style="@style/ButtonPrimary"
+                android:text="@string/analyze_button"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ProgressBar -->
+    <ProgressBar
+        android:id="@+id/progress_bar_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="10dp"
+        android:visibility="gone"/>
+</FrameLayout>
