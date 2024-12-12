@@ -16,7 +16,9 @@ import com.example.perceivo.databinding.FragmentProfileBinding
 import com.example.perceivo.model.ChangePasswordRequest
 import com.example.perceivo.model.ProfileRequest
 import com.example.perceivo.repository.AuthRepository
+import com.example.perceivo.repository.DashboardRepository
 import com.example.perceivo.repository.ProfileRepository
+import com.example.perceivo.repository.SentimentRepository
 import com.example.perceivo.ui.SignInActivity
 import com.example.perceivo.viewmodel.UiState
 import com.example.perceivo.viewmodel.ViewModelFactory
@@ -35,9 +37,11 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val apiService = ApiConfig.getApiService()
         val dataStoreManager = DataStoreManager.getInstance(requireContext())
+        val repository = SentimentRepository(apiService, dataStoreManager)
         val authRepository = AuthRepository(apiService, dataStoreManager)
         val profileRepository = ProfileRepository(apiService, dataStoreManager)
-        val factory = ViewModelFactory(authRepository, profileRepository)
+        val dashboardRepository = DashboardRepository(apiService, dataStoreManager)
+        val factory = ViewModelFactory(authRepository, profileRepository, dashboardRepository, repository)
         viewModel = ViewModelProvider(this, factory).get(ProfileViewModel::class.java)
 
         return binding.root

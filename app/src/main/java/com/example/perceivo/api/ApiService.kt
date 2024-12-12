@@ -3,6 +3,7 @@ package com.example.perceivo.api
 import com.example.perceivo.model.AllSentimentResponse
 import com.example.perceivo.model.ChangePasswordRequest
 import com.example.perceivo.model.ChangePasswordResponse
+import com.example.perceivo.model.DashboardResponse
 import com.example.perceivo.model.LoginRequest
 import com.example.perceivo.model.LoginResponse
 import com.example.perceivo.model.ProfileRequest
@@ -13,6 +14,7 @@ import com.example.perceivo.model.SentimentDetailResponse
 import com.example.perceivo.model.SentimentRequest
 import com.example.perceivo.model.SentimentResponse
 import com.example.perceivo.model.UpdateProfileResponse
+import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -64,4 +66,9 @@ interface ApiService {
     suspend fun getAllSentiments(
         @Header("Authorization") token: String
     ): AllSentimentResponse
+
+    @GET("dashboard")
+    suspend fun getDashboard(
+        @Header("Authorization") token: String
+    ): Response<DashboardResponse>
 }

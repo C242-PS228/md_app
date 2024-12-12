@@ -12,7 +12,9 @@ import com.example.perceivo.data.DataStoreManager
 import com.example.perceivo.databinding.ActivitySignInBinding
 import com.example.perceivo.model.LoginRequest
 import com.example.perceivo.repository.AuthRepository
+import com.example.perceivo.repository.DashboardRepository
 import com.example.perceivo.repository.ProfileRepository
+import com.example.perceivo.repository.SentimentRepository
 import com.example.perceivo.viewmodel.AuthViewModel
 import com.example.perceivo.viewmodel.ViewModelFactory
 
@@ -23,7 +25,9 @@ class SignInActivity : AppCompatActivity() {
             AuthRepository(ApiConfig.getApiService(),
                 dataStoreManager = DataStoreManager.getInstance(this)),
             ProfileRepository(ApiConfig.getApiService(),
-                dataStoreManager = DataStoreManager.getInstance(this))
+                dataStoreManager = DataStoreManager.getInstance(this)),
+                DashboardRepository(ApiConfig.getApiService(), dataStoreManager = DataStoreManager.getInstance(this)),
+                SentimentRepository(ApiConfig.getApiService(), dataStoreManager = DataStoreManager.getInstance(this))
         )
     }
 
@@ -34,8 +38,6 @@ class SignInActivity : AppCompatActivity() {
 
         setUpLListener()
         observeViewModel()
-
-
 
     }
 

@@ -59,9 +59,9 @@
     <string name="bar">bar</string>
     <string name="positive_keywords">Positive Keywords</string>
     <string name="negative_keywords">Negative Keywords</string>
-    <string name="positive">positive</string>
-    <string name="negative">negative</string>
-    <string name="neutral">neutral</string>
+    <string name="positive">Positive</string>
+    <string name="negative">Negative</string>
+    <string name="neutral">Neutral</string>
     <string name="no_data">No Data</string>
     <string name="anonymous">Anonymous</string>"
     <string name="no_comment">No Comment</string>
@@ -86,4 +86,11 @@
         <item>Tiktok</item>
         <item>Google Maps</item>
     </string-array>
+
+    <string name="welcome_user">Hello User,\nWelcome to Perceivo</string>
+    <string name="positif_value">%1$d</string>
+    <string name="netral_value">%1$d</string>
+    <string name="negatif_value">%1$d</string>
+    <string name="sentiment_count">Sentiments Count: 0</string>
+    <string name="all_data_analytics">All Data Analytics</string>
 </resources>

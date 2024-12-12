@@ -3,35 +3,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.home.HomeFragment"
-    android:layout_marginTop="16dp">
+    tools:context=".ui.fragment.home.HomeFragment">
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="visible" />
-
         <TextView
-            android:id="@+id/empty_view"
+            android:id="@+id/tvWelcomeUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/no_data_available"
-            android:visibility="gone"
-            android:textSize="16sp"
-            android:textColor="@color/neutral_20" />
+            android:text="@string/welcome_user"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/img_1"
+            android:padding="16dp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
+        <ImageView
+            android:id="@+id/iv_welcome"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone" />
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/welcome_user"
+            android:src="@drawable/img_2"/>
+
+        <LinearLayout
+            style="@style/wrapper_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/paragraphRegular.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/all_data_analytics"
+                android:layout_marginBottom="8dp"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChartAllSentiment"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/no_data_available"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:textColor="@color/neutral_20" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:visibility="gone"/>
+        </LinearLayout>
     </LinearLayout>
+</ScrollView>
 </FrameLayout>

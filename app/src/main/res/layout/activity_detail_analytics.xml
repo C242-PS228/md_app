@@ -156,14 +156,6 @@
                     android:id="@+id/barChartSentiment"
                     android:layout_width="match_parent"
                     android:layout_height="200dp" />
-
-                <!--<ImageView
-                    android:id="@+id/img_chart"
-                    style="@style/paragraphRegular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/bar"
-                    android:src="@drawable/ic_bar"/>-->
             </LinearLayout>
 
             <!-- top comments -->

@@ -213,14 +213,16 @@
                 android:layout_height="wrap_content"
                 android:text="@string/or"
                 android:gravity="center"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp"
+                android:visibility="gone"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_google"
                 style="@style/ButtonGoogle"
                 android:layout_marginTop="16dp"
                 android:text="@string/continue_with_google"
-                app:icon="@drawable/ic_google"/>
+                app:icon="@drawable/ic_google"
+                android:visibility="gone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

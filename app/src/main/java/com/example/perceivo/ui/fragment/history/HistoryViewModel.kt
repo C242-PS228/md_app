@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.perceivo.api.ApiService
 import com.example.perceivo.model.SentimentData
 import com.example.perceivo.repository.SentimentRepository
 import kotlinx.coroutines.launch

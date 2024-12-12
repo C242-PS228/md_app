@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             // Configure toolbar and icons based on destination
             when (destination.id) {
                 R.id.nav_home -> {
-                    binding.tvToolbarTitle.text = getString(R.string.nav_home)
+                    binding.toolbar.visibility = View.GONE
                     setActiveIcon(R.id.nav_home, R.drawable.ic_home_fill)
                 }
                 R.id.nav_analytics -> {

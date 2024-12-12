@@ -258,12 +258,12 @@ class DetailAnalyticsActivity : AppCompatActivity() {
                 }
             }
 
+            tvSentimentCategories.text = sentimentCategory
+
             // Bar Chart positive negative neutral
             val countPositive = data.statistic?.data?.positive ?: 0
             val countNegative = data.statistic?.data?.negative ?: 0
             val countNeutral = data.statistic?.data?.neutral ?: 0
-
-            tvSentimentCategories.text = sentimentCategory
 
             val dataSentiment = mapOf("Positive" to countPositive, "Neutral" to countNeutral, "Negative" to countNegative)
             setupBarChartSentiment(dataSentiment)
